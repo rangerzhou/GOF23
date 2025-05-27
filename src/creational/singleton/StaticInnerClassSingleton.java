@@ -10,7 +10,10 @@ package creational.singleton;
  */
 public class StaticInnerClassSingleton {
     private StaticInnerClassSingleton() {
-
+        // 防反射攻击
+        if (Holder.INSTANCE != null) {
+            throw new RuntimeException("Already initialized");
+        }
     }
 
     // 静态内部类，只有在第一次使用时才会被加载
@@ -20,6 +23,11 @@ public class StaticInnerClassSingleton {
 
     public static StaticInnerClassSingleton getInstance() {
         return SingletonHolder.INSTANCE;
+    }
+
+    // 防止反序列化攻击
+    protected Object readResolve() {
+        return getInstance();
     }
 
     public void showMessage() {
