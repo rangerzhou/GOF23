@@ -1,6 +1,7 @@
 package structural.flayweight;
 
 public class ConcreteBook implements BookFlyWeight {
+    // 内部状态
     private final String bookName;
 
     public ConcreteBook(String bookName) {
@@ -9,7 +10,7 @@ public class ConcreteBook implements BookFlyWeight {
     }
 
     @Override
-    public void locate(String location) {
+    public void locate(String location) { // location 为外部状态
         System.out.println("《" + bookName + "》位于 " + location);
     }
 }
