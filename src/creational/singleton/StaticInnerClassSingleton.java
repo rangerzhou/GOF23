@@ -11,7 +11,7 @@ package creational.singleton;
 public class StaticInnerClassSingleton {
     private StaticInnerClassSingleton() {
         // 防反射攻击
-        if (Holder.INSTANCE != null) {
+        if (SingletonHolder.INSTANCE != null) {
             throw new RuntimeException("Already initialized");
         }
     }
