@@ -1,6 +1,6 @@
 package creational.factory.abstract_fac;
 
-public class XiaomiPhone implements IPhoneProduct {
+public class XiaomiPhone implements IPhone {
     @Override
     public void powerOn() {
         System.out.println("小米手机开机");

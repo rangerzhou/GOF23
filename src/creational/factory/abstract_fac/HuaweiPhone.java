@@ -1,6 +1,6 @@
 package creational.factory.abstract_fac;
 
-public class HuaweiPhone implements IPhoneProduct {
+public class HuaweiPhone implements IPhone {
     @Override
     public void powerOn() {
         System.out.println("华为手机开机");

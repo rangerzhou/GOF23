@@ -1,13 +1,13 @@
 package creational.factory.abstract_fac;
 
-public class XiaomiFactory implements IProductFactory{
+public class XiaomiFactory implements IFactory {
     @Override
-    public IPhoneProduct iphoneProduct() {
+    public IPhone createPhone() {
         return new XiaomiPhone();
     }
 
     @Override
-    public ICarProduct icarProduct() {
+    public ICar createCar() {
         return new XiaomiCar();
     }
 }

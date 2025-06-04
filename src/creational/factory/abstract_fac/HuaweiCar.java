@@ -1,6 +1,6 @@
 package creational.factory.abstract_fac;
 
-public class HuaweiCar implements ICarProduct{
+public class HuaweiCar implements ICar {
     @Override
     public void powerOn() {
         System.out.println("华为汽车发动机启动");

@@ -3,27 +3,27 @@ package creational.factory.abstract_fac;
 public class Customer {
     public static void main(String[] args) {
         System.out.println("=====小米系列产品=====");
-        XiaomiFactory xiaomiFactory = new XiaomiFactory();
+        IFactory xiaomiFactory = new XiaomiFactory();
 
-        ICarProduct xiaomiCar = xiaomiFactory.icarProduct();
+        ICar xiaomiCar = xiaomiFactory.createCar();
         xiaomiCar.powerOn();
         xiaomiCar.navigation();
         xiaomiCar.powerOff();
 
-        IPhoneProduct xiaomiPhone = xiaomiFactory.iphoneProduct();
+        IPhone xiaomiPhone = xiaomiFactory.createPhone();
         xiaomiPhone.powerOn();
         xiaomiPhone.sendSMS();
         xiaomiPhone.powerOff();
 
         System.out.println("=====华为系列产品=====");
-        HuaweiFactory huaweiFactory = new HuaweiFactory();
+        IFactory huaweiFactory = new HuaweiFactory();
 
-        ICarProduct huaweiCar = huaweiFactory.icarProduct();
+        ICar huaweiCar = huaweiFactory.createCar();
         huaweiCar.powerOn();
         huaweiCar.navigation();
         huaweiCar.powerOff();
 
-        IPhoneProduct huaweiPhone = huaweiFactory.iphoneProduct();
+        IPhone huaweiPhone = huaweiFactory.createPhone();
         huaweiPhone.powerOn();
         huaweiPhone.sendSMS();
         huaweiPhone.powerOff();

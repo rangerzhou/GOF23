@@ -1,6 +1,6 @@
 package creational.factory.abstract_fac;
 
-public class XiaomiCar implements ICarProduct{
+public class XiaomiCar implements ICar {
     @Override
     public void powerOn() {
         System.out.println("小米汽车发动机启动");
