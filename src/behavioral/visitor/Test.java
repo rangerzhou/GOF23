@@ -8,7 +8,5 @@ public class Test {
         TaxCalculatorVisitor visitor = new TaxCalculatorVisitor();
         salary.accept(visitor);
         bonus.accept(visitor);
-
-
     }
 }
